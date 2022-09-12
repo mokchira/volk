@@ -11,6 +11,7 @@ project(volk VERSION
 
 # CMake 3.12 changes the default behaviour of option() to leave local variables
 # unchanged if they exist (which we want), but we must work with older CMake versions.
+set(VOLK_STATIC_DEFINES VK_USE_PLATFORM_XCB_KHR)
 if(NOT DEFINED VOLK_STATIC_DEFINES)
   option(VOLK_STATIC_DEFINES "Additional defines for building the volk static library, e.g. Vulkan platform defines" "")
 endif()
